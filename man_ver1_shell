@@ -1,0 +1,12 @@
+\" manpage for simple-shell. Simple shell project to Holberton School.
+.\" Contact AUTHORS to correct errors or typos.
+.TH simple_shell 0 "11 April 2022" "1.0" "simple-shell man page"
+
+.SH COPYRIGHT
+See AUTHORS
+
+.SH AUTHORS
+.B Santiago Monsalve Pinto  <4532@holbertonshcool.com>
+.br
+.B Pablo Emilio Agudelo Garavito <4602@holbertonschool.com>
+.br
