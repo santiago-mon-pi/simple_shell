@@ -8,4 +8,6 @@
 #include <unistd.h>
 #include <signal.h>
 
+int arg_count(char *str);
+
 #endif
