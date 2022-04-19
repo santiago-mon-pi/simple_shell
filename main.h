@@ -11,5 +11,6 @@
 int arg_count(char *str);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
+void free_array(char **argv, int argc);
 
 #endif

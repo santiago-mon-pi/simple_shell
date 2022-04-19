@@ -54,7 +54,7 @@ char **argv(char *strings, int argc)
     }
     else 
     {
-        lenstrings = _strlen(*strings);
+        lenstrings = _strlen(strings);
         buffer = malloc(sizeof(char) * (lenstrings + 1));
     }
     if (buffer == NULL)
@@ -71,6 +71,7 @@ char **argv(char *strings, int argc)
     arr[i] = malloc(sizeof(char) * (lenstrings + 1));
     }
     if (arr[i] == NULL) 
+    
     {
     free_array(arr, argc);
     perror("ERROR");
