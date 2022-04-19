@@ -9,5 +9,7 @@
 #include <signal.h>
 
 int arg_count(char *str);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 
 #endif
