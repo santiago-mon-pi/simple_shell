@@ -80,11 +80,9 @@ arr[i] = _strcpy(arr[i], token);
 token = strtok(NULL, " ");
 i++;
 
-}
-
 arr[i] = NULL;
 free(buffer);
 free(strings);
-return(arr);
+return (arr);
 
 }
