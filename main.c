@@ -9,7 +9,7 @@ int main(void)
 
     while (EOF)
         {
-            puts("#placeholders");
+            puts("$hell");
             fflush(stdin);
             in_c = getline(&str, &line_size, stdin);
 
