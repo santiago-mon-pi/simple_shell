@@ -6,6 +6,8 @@ int main(void)
     size_t line_size = 0;
     int in_c;
     int argc = 0;
+    char **argv;
+    int cunt = 1;
 
     while (EOF)
         {
@@ -23,8 +25,18 @@ int main(void)
             else
             {
                 argc = arg_count(str);
-                printf("%d\n", argc);
-
+                argv = args_v(str, argc);
+                
+                if (argc == 0)
+                {
+                    free_array(argv, argc);
+                }
+                else
+                {
+                    argv[0] = path_validator(argv[0], argv, argc, str);
+                    _exec(argv, str, argc, cunt);
+                }
+                cunt++;
             }
         }
         free(str);

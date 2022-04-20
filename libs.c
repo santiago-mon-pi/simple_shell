@@ -33,7 +33,7 @@ int arg_count(char *str)
     return (x);
 }
 
-char **argv(char *strings, int argc)
+char **args_v(char *strings, int argc)
 
 {
     char *buffer = NULL, *token = NULL;
@@ -52,38 +52,36 @@ char **argv(char *strings, int argc)
         free(arr);
         perror("ERROR");
     }
-    else 
-    {
-        lenstrings = _strlen(strings);
-        buffer = malloc(sizeof(char) * (lenstrings + 1));
-    }
+    
+    lenstrings = _strlen(strings);
+    buffer = malloc(sizeof(char) * (lenstrings + 1));
+    
     if (buffer == NULL)
     {
         free(arr);
         perror("ERROR");
     }
     buffer = _strcpy(buffer, strings);
-    token = strtok(buffer, " ");
+    token = strtok(buffer, " \t\r\n\a");
 
     while (token != NULL)
     {   
-    lenstrings = _strlen(token);
-    arr[i] = malloc(sizeof(char) * (lenstrings + 1));
-    }
-    if (arr[i] == NULL) 
+        lenstrings = _strlen(token);
+        arr[i] = malloc(sizeof(char) * (lenstrings + 1));
     
-    {
-    free_array(arr, argc);
-    perror("ERROR");
+        if (arr[i] == NULL) 
+        {
+            free_array(arr, argc);
+            perror("ERROR");
+        }
+        arr[i] = _strcpy(arr[i], token);
+        token = strtok(NULL, " \t\r\n\a");
+        i++;    
+
     }
-
-arr[i] = _strcpy(arr[i], token);
-token = strtok(NULL, " ");
-i++;
-
-arr[i] = NULL;
-free(buffer);
-free(strings);
-return (arr);
+    arr[i] = NULL;
+    free(buffer);
+    free(strings);
+    return (arr);
 
 }
