@@ -27,9 +27,9 @@ int arg_count(char *str)
 }
 /**
  * **args_v - function for tokenizer
- * @str: pointer with a part of the imput
+ * @str: pointer with a part of the input
  * @argc: number of arguments in input
- * Return: an argument
+ * Return: segmented string
  */
 char **args_v(char *str, int argc)
 {

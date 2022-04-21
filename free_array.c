@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * free_array - function to free up space meory
- * @argv: space memory to free
- * @argc: size of argument inside
+ * free_array - cleans memory of double-pointer
+ * @argv: double pointer to free
+ * @argc: size of arguments
  */
 void free_array(char **argv, int argc)
 {
