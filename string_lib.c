@@ -56,7 +56,7 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * _strlen_recursion - prints the length of a string
+ * _strlen - prints the length of a string
  * @s: string to be check
  * Return: length
  */
