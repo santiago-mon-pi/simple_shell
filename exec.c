@@ -16,7 +16,7 @@ void _exec(char **argv, char *buf, int argc, int count)
 	{
 			status = _atoi(argv[1]);
 			fflush(stdin);
-			free_grid(argv, argc);
+			free_array(argv, argc);
 			free(buf);
 			exit(status);
 	}
@@ -31,5 +31,5 @@ void _exec(char **argv, char *buf, int argc, int count)
 		}
 	}
 	else
-		new_proccess(argv, buf, argc, count);
+		fork_process(argv, buf, argc, count);
 }

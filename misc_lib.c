@@ -66,3 +66,38 @@ int _atoi(char *c)
     }
     return (res);
 }
+
+/**
+ * system_error - displays error in command line
+ * @argv: pointer to pointer
+ * @count: counter
+ * @error: exit error.
+ **/
+
+void system_error(char **argv, int count, char *error)
+{
+	_puts("$shell: ");
+	print_num(count);
+	_puts(": ");
+	_puts(argv[0]);
+	_puts(": ");
+	_puts(error);
+	_putchar(10);
+}
+
+void print_num(int n)
+{
+	unsigned int mid;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	mid = n;
+	if (mid / 10)
+	{
+		print_num(mid / 10);
+	}
+	_putchar(mid % 10 + '0');
+}

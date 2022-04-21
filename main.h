@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <unistd.h>
+#include <stddef.h>
 
 extern char **environ;
 
@@ -24,4 +25,8 @@ void _exec(char **argv, char *buf, int argc, int count);
 int _putchar(char c);
 void _puts(char *str);
 int _atoi(char *c);
+void fork_process(char **argv, char *buf, int argc, int count);
+void system_error(char **argv, int count, char *error);
+void print_num(int n);
+
 #endif
