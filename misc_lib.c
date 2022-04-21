@@ -36,7 +36,7 @@ void _puts(char *str)
 
 int _atoi(char *c)
 {
-    int len_str = strlen(c);
+    int len_str = _strlen(c);
     int i = 0;
     int sign = 0;
     int res = 0;
