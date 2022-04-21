@@ -27,46 +27,35 @@ void _puts(char *str)
 		_putchar(str[i]);
 	}
 }
-
 /**
  * _atoi - convert str to int
  * @s: str to be processed
  * Return: integer
  */
-
 int _atoi(char *c)
 {
-    int len_str = _strlen(c);
-    int i = 0;
-    int sign = 0;
-    int res = 0;
+	int len_str = _strlen(c);
+	int i = 0;
+	int sign = 0;
+	int res = 0;
 
-    while (i <= len_str)
-    {
-        if (c[i] == '-')
-        {
-            sign++;
-        }
-        if (c[i] >= '0' && c[i] <= '9')
-        {
-            if (sign % 2)
-            {
-                res = (res * 10) - (c[i] - '0');
-            }
-            else
-            {
-                res = (res * 10) + (c[i] - '0');
-            }
-            if (c[i + 1] < '0' || c[i + 1] > '9')
-            {
-                break;
-            }
-        }
-        i++;
-    }
-    return (res);
+	while (i <= len_str)
+	{
+		if (c[i] == '-')
+			sign++;
+		if (c[i] >= '0' && c[i] <= '9')
+		{
+			if (sign % 2)
+				res = (res * 10) - (c[i] - '0');
+			else
+				res = (res * 10) + (c[i] - '0');
+			if (c[i + 1] < '0' || c[i + 1] > '9')
+				break;
+		}
+		i++;
+	}
+	return (res);
 }
-
 /**
  * system_error - displays error in command line
  * @argv: pointer to pointer
