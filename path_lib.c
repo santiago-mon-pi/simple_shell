@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * *path_validator - check the PATH
+ * *path_validator - checks the PATH
  * @cmd: comand
- * @argv: double pointer with the argument and the len of argument
+ * @argv: double pointer with the argument and the lenght of argument
  * @argc: size of argument
  * @tmp: pointer for temporal content
  * Return: the command
