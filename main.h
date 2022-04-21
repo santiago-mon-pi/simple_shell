@@ -21,5 +21,7 @@ char *_strcat(char *dest, char *src);
 char *path_acc(char *tk_buf, char *tk, char *cmd, char *path);
 char *path_validator(char *cmd, char **argv, int argc, char *tmp);
 void _exec(char **argv, char *buf, int argc, int count);
-
+int _putchar(char c);
+void _puts(char *str);
+int _atoi(char *c);
 #endif
