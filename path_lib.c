@@ -54,7 +54,7 @@ char *path_validator(char *cmd, char **argv, int argc, char *tmp)
 /**
  * *path_tk - tokenizer
  * @path: pointer with path
- * @tk: simbols
+ * @tk: symbols
  * Return: content in tk
  */
 char *path_tk(char *path, char *tk)
@@ -70,7 +70,7 @@ char *path_tk(char *path, char *tk)
  * @tk: pointer with a part of the tokenized input
  * @cmd: comand
  * @path: pointer with PATH copy
- * Return:bufer
+ * Return: buffer
  */
 char *path_acc(char *tk_buf, char *tk, char *cmd, char *path)
 {
