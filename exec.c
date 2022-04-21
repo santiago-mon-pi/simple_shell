@@ -11,14 +11,13 @@ void _exec(char **argv, char *buf, int argc, int count)
 		free(buf);
 		exit(EXIT_SUCCESS);
 	}
-
-    if ((_strcmp(argv[0], "exit") == 0) && (argc == 2))
+	if ((_strcmp(argv[0], "exit") == 0) && (argc == 2))
 	{
-			status = _atoi(argv[1]);
-			fflush(stdin);
-			free_array(argv, argc);
-			free(buf);
-			exit(status);
+		status = _atoi(argv[1]);
+		fflush(stdin);
+		free_array(argv, argc);
+		free(buf);
+		exit(status);
 	}
 
 	if ((_strcmp(argv[0], "/usr/bin/env") == 0) && (argc == 1))
