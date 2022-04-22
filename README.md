@@ -9,7 +9,7 @@ This project consisted in building a shell with basic functionality and commands
 
 To install just copy and paste this command on your terminal!
 ```sh
-git clone https://github.com/yazgiraldoa/simple_shell.git
+git clone git@github.com:santiago-mon-pi/simple_shell.git
 ```
 
 ## How to run it
