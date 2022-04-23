@@ -1,0 +1,72 @@
+\" manpage for simple-shell. Simple shell project to Holberton School.
+.\" Contact AUTHORS to correct errors or typos.
+.TH simple_shell 0 "11 April 2022" "1.0" "simple-shell man page"
+
+.SH COPYRIGHT
+See AUTHORS
+
+.SH AUTHORS
+.B Santiago Monsalve Pinto  <4532@holbertonshcool.com>
+.br
+.B Pablo Emilio Agudelo Garavito <4602@holbertonschool.com>
+.br
+.TH "April 2022" "Holberton School" "Simple Shell"
+.hy
+.SH NAME
+.PP
+Simple Shell - command interpreter
+.SH SYNOPSYS
+.PP
+\f[B]./hsh\f[R] Run the shell
+.SH DESCRIPTION
+.PP
+\f[B]Simple Shell\f[R] is a command interpreter program for unix-based
+operating systems.
+The shell allows the user to communicate with the operating system
+interactively through the commands that the user enters.
+Its function is to read the command line, interpret its meaning, carry
+out the command, and then output the result via the outputs.
+.PP
+compilation: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+.PP
+\f[B]built-in\f[R]
+.PP
+\f[I]cd\f[R] - change directory
+.PP
+\f[I]env\f[R] - Prints the environment variables
+.PP
+\f[I]exit\f[R] - exit the program
+.PP
+\f[I]help\f[R] - Get information about a built-in shell command.
+.SH OPTIONS
+.TP
+\f[B]./hsh\f[R]
+Interactive mode.
+.TP
+\f[B]echo \[lq]/bin/ls\[rq] | ./hsh\f[R]
+But also in non-interactive mode.
+.SH EXAMPLES
+.PP
+\f[B]Interactive mode:\f[R]
+.PP
+$ ./hsh
+.PP
+simple_prompt$ ls execute_args.c main.c own_cd.c own_exit.c prueba
+read_stream.c shell_interactive.c split_line.c hsh new_process.c
+own_env.c own_help.c read_line.c shell.h shell_non_interactive.c
+simple_prompt$
+.PP
+\f[B]Non-interactive mode:\f[R]
+.PP
+$ echo \[lq]/bin/ls\[rq] | ./hsh
+.PP
+execute_args.c own_cd.c prueba shell_interactive.c hsh own_env.c
+read_line.c shell_non_interactive.c main.c own_exit.c read_stream.c
+split_line.c new_process.c own_help.c shell.h
+.SH BUGS
+.PP
+No bugs found
+.SH SEE ALSO
+.PP
+chdir(2), exit(3), fork(2), free(3), getline(3), isatty(3), malloc(3),
+perror(3), strtok (3), waitpid(2)
