@@ -1,28 +1,34 @@
 #include "main.h"
 
+char *path_ciclo()
+{
+	char *path_buff = NULL;
+	int i, env_len = 0;
+
+	for (i = 0; environ[i] != NULL; i++)
+	{
+		if (_strcmp(environ[i], "PATH") == 0)
+		{
+			env_len = strlen(environ[i]);
+			path_buff = malloc(sizeof(char) * (env_len + 1));
+			if (path_buff == NULL)
+			{
+				perror("ERROR");
+			}
+			path_buff = _strcpy(path_buff, environ[i]);
+		}
+	}
+	return (path_buff);
+}
 char *path_validator(char *cmd, char **argv, int argc, char *tmp)
 {
-	int env_len = 0, tk_len = 0, i;
-	char *path_buf, *tk = NULL, *tmp_tk;
+	int tk_len = 0;
+	char *path_buff, *tk = NULL, *tmp_tk;
 
 	if (cmd[0] != '/')
 	{
-		for (i = 0; environ[i] != NULL; i++)
-		{
-			if (_strcmp(environ[i], "PATH") == 0)
-			{
-				env_len = _strlen(environ[i]);
-				path_buf = malloc(sizeof(char) * (env_len + 1));
-				if (path_buf == NULL)
-				{
-					free_array(argv, argc);
-					free(tmp);
-					perror("ERROR");
-				}
-				path_buf = _strcpy(path_buf, environ[i]);
-			}
-		}
-		tk = path_tk(path_buf, tk);
+
+		tk = path_ciclo(path_buff, tk);
 		while (tk != NULL)
 		{
 			tk_len = _strlen(tk);
@@ -31,15 +37,15 @@ char *path_validator(char *cmd, char **argv, int argc, char *tmp)
 			{
 				free_array(argv, argc);
 				free(tmp);
-				free(path_buf);
+				free(path_buff);
 				perror("ERROR");
 			}
-			tmp_tk = path_acc(tmp_tk, tk, cmd, path_buf);
+			tmp_tk = path_acc(tmp_tk, tk, cmd, path_buff);
 			if (tmp_tk != NULL)
 				return (tmp_tk);
 			tmp_tk = strtok(NULL, ";");
 		}
-		free(path_buf);
+		free(path_buff);
 		return (cmd);
 	}
 	return (cmd);
