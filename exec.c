@@ -11,8 +11,7 @@ void _exec(char **argv, char *buf, int argc, int count)
 		free(buf);
 		exit(EXIT_SUCCESS);
 	}
-
-    if ((_strcmp(argv[0], "exit") == 0) && (argc == 2))
+	if ((_strcmp(argv[0], "exit") == 0) && (argc == 2))
 	{
 			stat = _atoi(argv[1]);
 			fflush(stdin);
@@ -31,5 +30,5 @@ void _exec(char **argv, char *buf, int argc, int count)
 		}
 	}
 	else
-		new_proccess(argv, buf, argc, count);
+		fork_process(argv, buf, argc, count);
 }
