@@ -15,7 +15,7 @@ void _exec(char **argv, char *buf, int argc, int count)
 	{
 		stat = _atoi(argv[1]);
 		fflush(stdin);
-		free_grid(argv, argc);
+		free_array(argv, argc);
 		free(buf);
 		exit(stat);
 	}
