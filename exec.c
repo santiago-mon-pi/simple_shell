@@ -2,7 +2,7 @@
 
 void _exec(char **argv, char *buf, int argc, int count)
 {
-	int i = 0, status = 0;
+	int i = 0, stat = 0;
 
 	if ((_strcmp(argv[0], "exit") == 0) && (argc == 1))
 	{
@@ -14,11 +14,11 @@ void _exec(char **argv, char *buf, int argc, int count)
 
     if ((_strcmp(argv[0], "exit") == 0) && (argc == 2))
 	{
-			status = _atoi(argv[1]);
+			stat = _atoi(argv[1]);
 			fflush(stdin);
 			free_grid(argv, argc);
 			free(buf);
-			exit(status);
+			exit(stat);
 	}
 
 	if ((_strcmp(argv[0], "/usr/bin/env") == 0) && (argc == 1))

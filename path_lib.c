@@ -4,10 +4,7 @@ char *path_validator(char *cmd, char **argv, int argc, char *tmp)
 
 {
     int env_len = 0, tk_len = 0, i;
-    char *path_buf;
-    char *tk = NULL;
-    char *tmp_tk;
-    
+    char *path_buf, *tk = NULL, *tmp_tk;
 
     if (cmd[0] != '/')
     {
@@ -46,9 +43,7 @@ char *path_validator(char *cmd, char **argv, int argc, char *tmp)
             tmp_tk = path_acc(tmp_tk, tk, cmd, path_buf);
 
             if (tmp_tk != NULL)
-            {
                 return(tmp_tk);
-            }
             
             tmp_tk = strtok(NULL, ";");
         }
