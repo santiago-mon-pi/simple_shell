@@ -28,5 +28,6 @@ char *path_acc(char *tk_buf, char *tk, char *cmd, char *path);
 void fork_process(char **argv, char *buf, int argc, int count);
 void system_error(char **argv, int count, char *error);
 void print_num(int n);
+char *path_ciclo();
 
 #endif
