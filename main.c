@@ -6,21 +6,19 @@
  * Return: 0 to success.
  */
 int main(void)
+
 {
-    char *new_line = NULL;
-    
+	char *new_line = NULL;
 
-    if (isatty(STDIN_FILENO) == 1)
-    {
-       
-        interactive("#interactive$ ", new_line);
-    }
-    else
-    {
-       
-        non_interactive(new_line);
-    }
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		interactive("#interactive$ ", new_line);
+	}
 
+	else
+	{
+		non_interactive(new_line);
+	}
 
-    return (0);
+	return (0);
 }
