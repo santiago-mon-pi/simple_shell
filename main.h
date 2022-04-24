@@ -1,5 +1,5 @@
-#ifndef _HEAD_H_
-#define _HEAD_H_
+#ifndef _MAIN_H_
+#define _MAIN_H_
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdio.h>
@@ -33,7 +33,7 @@ char *clean_line(char *line);
 void free_double_pointer(char **argv, int argc);
 void *interactive(char *interactive_str, char *line);
 char *create_path_extension(char *cmd, char **argv, int argc);
-char *validate_access(char *cmd, char*tokenizer ,char **argv, int argc);
+char *validate_access(char *cmd, char *tokenizer, char **argv, int argc);
 char *get_route_bin(char *path, char *token);
 void run_command(char **argv_command, int argc, int bash_count);
 void create_process_to_execute(char **argv_command, int argc, int bash_count);
