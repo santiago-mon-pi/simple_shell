@@ -1,4 +1,4 @@
-#include "head.h"
+#include "main.h"
 
 /**
  * _strlen - Count the maximum number of a array

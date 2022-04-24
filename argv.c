@@ -1,4 +1,4 @@
-#include "head.h"
+#include "main.h"
 
 /**
  * argv - split a string and create an array of strings

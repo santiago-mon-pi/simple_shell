@@ -1,4 +1,4 @@
-#include "head.h"
+#include "main.h"
 
 /**
  * non_interactive - if insert code in mode interactive execute

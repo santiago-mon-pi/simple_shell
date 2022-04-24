@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * run_command - execute command and create new process threat to execute the command

@@ -1,4 +1,4 @@
-#include "head.h"
+#include "main.h"
 
 /**
  * interactive - execute shell in interctive mode

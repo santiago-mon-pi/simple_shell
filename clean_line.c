@@ -1,4 +1,4 @@
-#include "head.h"
+#include "main.h"
 
 char *clean_line(char *line)
 {
