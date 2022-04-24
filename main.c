@@ -12,12 +12,12 @@ int main(void)
 
     if (isatty(STDIN_FILENO) == 1)
     {
-        // Interactive
+       
         interactive("#interactive$ ", new_line);
     }
     else
     {
-        // Non-interactive
+       
         non_interactive(new_line);
     }
 

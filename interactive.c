@@ -14,28 +14,28 @@ void *interactive(char *interactive_str, char *line)
     while (EOF)
     {
         print_line(interactive_str);
-        // clean standar input
+      
         fflush(stdin);
-        // Create len charecters and put data in &line
+        
         len_characters = getline(&line, &line_size, stdin);
 
-        // Validate line
+        
         if (line == NULL)
             perror("Error");
 
-        // Validate charecters
+        
         if (len_characters == EOF)
         {
             free(line);
             fflush(stdin);
             exit(127);
         }
-        // clean line, remove the last charecter ('\n')
+        
         line = clean_line(line);
 
-        // Get argc and validate if are parameters
+        
         argument_count = argc(line);
-        // Creating a argv, when this is created, free the line
+        
         argument_variable = argv(line, argument_count);
         if (argument_count != 0)
         {
