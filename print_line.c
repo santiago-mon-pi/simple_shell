@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts - print a array charecters
+ * print_line - double-use printer
  * @str: Input data array
  *
  **/
@@ -11,6 +11,5 @@ void print_line(char *str)
 
 	count = _strlen(str);
 	for (i = 0; i < count; i++)
-        write(1, &str[i], 1);
+		write(1, &str[i], 1);
 }
-
