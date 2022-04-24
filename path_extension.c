@@ -12,18 +12,15 @@ char *create_path_extension(char *cmd, char **argv, int argc)
 {
     char *environment_path = NULL, *tokenzer = NULL, *token_buf = NULL;
 
-    // Validate if the command begin with the charecter '/'
     if (cmd[0] != '/')
     {
-        // Get path environment
         environment_path = get_path();
         if (environment_path == NULL)
         {
             free_double_pointer(argv, argc);
             perror("./shell");
         }
-        // this get the bin execution
-        tokenzer = get_route_bin(environment_path, tokenzer);
+	tokenzer = get_route_bin(environment_path, tokenzer);
         token_buf = validate_access(cmd, tokenzer, argv, argc);
         if (token_buf == NULL)
         {
@@ -55,7 +52,6 @@ char *get_path()
             {
                 return NULL;
             }
-            // this return /usr/local/bin
             return_path = _strcpy(return_path, environ[i]);
         }
     }
@@ -102,7 +98,6 @@ char *validate_access(char *cmd, char*tokenizer ,char **argv, int argc)
             return NULL;
         }
 
-        // create the 
         return_token = _strcpy(return_token, tokenizer);
         return_token = _strcat(return_token, "/");
         return_token = _strcat(return_token, cmd);
