@@ -19,14 +19,14 @@ char *create_path_extension(char *cmd, char **argv, int argc)
 		if (environment_path == NULL)
 		{
 			free_double_pointer(argv, argc);
-			perror("./shell");
+			perror("./hsh");
 		}
 		tokenzer = get_route_bin(environment_path, tokenzer);
 		token_buf = validate_access(cmd, tokenzer, argv, argc);
 		if (token_buf == NULL)
 		{
 			free_double_pointer(argv, argc);
-			perror("./shell");
+			perror("./hsh");
 		}
 		return (token_buf);
 	}
