@@ -9,7 +9,7 @@
 
 void sys_error(char **argv, int count, char *error)
 {
-	_puts("#cisfun$: ");
+	_puts("#noninteractive$: ");
 	print_number(count);
 	_puts(": ");
 	_puts(argv[0]);
