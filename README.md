@@ -22,29 +22,6 @@ Then execute it using:
 ./hsh
 ```
 
-## Funtion Glossary
-
-These are all the functions used to build our shell
-
-| Function | Description |
-| ------ | ------ |
-| _sterlen | prints the lenght of a string |
-| _strcpy |copies a string |
-| _strcmp |compares two strings |
-| _strcat| concatenates two stringes |
-| _putchar | writes a character to stdout |
-| _puts | prints a string|
-| _atoi | converts str to int |
-| print_num | prints number |
-| arg_count |counts arguments in input |
-| args_v |tokenizes arguments |
-| free_array |frees double pointer|
-| _exec| runs command in different process |
-| path_validator | checks for executables in PATH |
-| path_tk | tokenizes PATH |
-| path_acc | checks if the file exits in PATH |
-| fork_process| creates new process and executes command |
-| system_error | displays error|
 
 ## Authors
 
